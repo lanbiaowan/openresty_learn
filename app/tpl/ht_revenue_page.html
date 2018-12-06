@@ -1,0 +1,30 @@
+<p id="money"></p>
+
+<script type="text/javascript" src="http://qtest.hellotalk.org/htmall_lan/Public/dwz/js/jquery-1.7.2.min.js?ver=1.8.0"></script>
+
+<script>
+
+$(function(){
+
+	console.log(777);
+
+	function a(num){
+
+		$.ajax({
+			 type: "GET",
+             url: "/api/get_today_revenue",
+             data: {last_num:num},
+             dataType: "json",
+             success: function(data){
+                   $("#money").html(data.today_revenue);
+
+                   a(data.today_revenue);    
+             }
+         });
+	}
+	a(0);
+
+});	
+
+
+</script>
