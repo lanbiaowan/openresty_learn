@@ -7,7 +7,6 @@ local template = require "resty.template"
 --local tpl = ngx.var.command .. ".html"
 
 --test1
-
 --test
 
 
