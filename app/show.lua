@@ -7,7 +7,7 @@ local template = require "resty.template"
 --local tpl = ngx.var.command .. ".html"
 
 --test1
---test1
+--test12345
 
 
 template.render(ngx.var.command ..".html",{param = ngx.var.arg_param,param2 = ngx.var.arg_param2})
